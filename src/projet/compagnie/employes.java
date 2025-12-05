@@ -1,10 +1,27 @@
 package projet.compagnie;
 
 public class employes extends Personne {
-    protected String numeroEmploye;
-    protected String dateEmbauche;
+
+    protected String role;
+
+    public employes() {
+        super();
+        this.role = "";
+    }
+
 
     public String obtenirRole() {
-        return "Employé";
+        return role;
+    }
+
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+
+    @Override
+    public String obtenirInfos() {
+        return super.obtenirInfos() + ", Rôle : " + role;
     }
 }

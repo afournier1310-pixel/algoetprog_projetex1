@@ -1,14 +1,19 @@
 package projet.compagnie;
 
 public class personnelcabine extends employes {
-    private String qualification;
 
-    public void affecterVol(Vol vol) {
-        // à compléter plus tard
+    public personnelcabine() {
+        super();
+        setRole("Personnel cabine");
     }
 
     @Override
     public String obtenirRole() {
         return "Personnel cabine";
+    }
+
+    @Override
+    public String obtenirInfos() {
+        return super.obtenirInfos() + " (Personnel cabine)";
     }
 }

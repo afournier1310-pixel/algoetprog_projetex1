@@ -1,15 +1,19 @@
 package projet.compagnie;
 
 public class pilotes extends employes {
-    private String licence;
-    private int heuresDeVol;
 
-    public void affecterVol(Vol vol) {
-        // on remplira plus tard
+    public pilotes() {
+        super();
+        setRole("Pilote");
     }
 
     @Override
     public String obtenirRole() {
         return "Pilote";
+    }
+
+    @Override
+    public String obtenirInfos() {
+        return super.obtenirInfos() + " (Pilote)";
     }
 }
